@@ -11,7 +11,7 @@ def miniMaxSum():
     # process input
     numArr = numInput.strip().split(" ")
     # convert list of string to list of int and sort them ascending
-    sortedNumArr = sorted([int(i) for i in numInput.strip().split(" ")])
+    sortedNumArr = sorted([(int(i) if i!="" else 0) for i in numInput.strip().split(" ")])
     # get max and min number
     maxNum = sum(sortedNumArr[1:])
     minNum = sum(sortedNumArr[:-1])
